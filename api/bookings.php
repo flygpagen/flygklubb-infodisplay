@@ -79,8 +79,8 @@ function callMyWebLogAPIv4($endpoint, $bearerToken, $queryParams = []) {
 
 // Get today's date
 $today = date('Y-m-d');
-// Look back 365 days to catch long-term maintenance bookings
-$lookbackDate = date('Y-m-d', strtotime('-365 days'));
+// Look back 30 (used to be 365) days to catch long-term maintenance bookings
+$lookbackDate = date('Y-m-d', strtotime('-30 days'));
 // Look forward 30 days to catch upcoming bookings
 $futureDate = date('Y-m-d', strtotime('+30 days'));
 
@@ -237,3 +237,4 @@ echo json_encode([
     'fetchedAt' => date('c'),
     'count' => count($bookings),
 ]);
+
