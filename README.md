@@ -15,5 +15,5 @@ Detta är en enkel informationspanel för en flygklubb som hämtar bokningar fr�
 ## Begränsningar
 - Displayen är gjord för skärm i 4:3-format och är inte testad på andra.
 - Koden filtrerar flygplan med SE-registrering, andra objekt visas inte i listan.
-- Bokningar som började för mer än 365 dagar sedan visas inte, det blir för mycket data att hämta och filtrera.
 - Vid skolning med elev visas den som har gjort bokningen, inte elevens namn.
+- Bokningar hämtas 3 dagar bakåt i tiden (och 3 dagar framåt) men detta ska verifieras, behövs eventuellt inte längre än innevarande dag.
