@@ -26,8 +26,8 @@ if (empty($apiKey)) {
 }
 
 $icao = defined('ICAO_CODE') ? ICAO_CODE : 'ESMK';
-$metarUrl = "https://api.checkwx.com/metar/{$icao}/decoded";
-$tafUrl = "https://api.checkwx.com/taf/{$icao}/decoded";
+$metarUrl = "https://api.checkwx.com/v2/metar/{$icao}/decoded";
+$tafUrl = "https://api.checkwx.com/v2/taf/{$icao}/decoded";
 
 // Function to fetch from CheckWX API
 function fetchCheckWX($url, $apiKey) {
