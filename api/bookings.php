@@ -79,15 +79,16 @@ function callMyWebLogAPIv4($endpoint, $bearerToken, $queryParams = []) {
 
 // Get today's date
 $today = date('Y-m-d');
-// Look back 365 days to catch long-term maintenance bookings
-$lookbackDate = date('Y-m-d', strtotime('-365 days'));
-// Look forward 30 days to catch upcoming bookings
-$futureDate = date('Y-m-d', strtotime('+30 days'));
+// MyWebLog returns all bookings whose period overlaps the from/to window,
+// so requesting just today also includes multi-day bookings active today.
+// API requires plain YYYY-MM-DD format (no time component).
+$dateFrom = $today;
+$dateTo   = $today;
 
-// Fetch bookings using v4 API with extended date range
+// Fetch today's bookings (incl. overlapping multi-day bookings)
 $bookingsData = callMyWebLogAPIv4('bookings', $bearerToken, [
-    'date_from' => $lookbackDate,
-    'date_to' => $futureDate,
+    'date_from' => $dateFrom,
+    'date_to' => $dateTo,
 ]);
 
 // Fetch object status for maintenance info
