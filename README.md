@@ -33,7 +33,6 @@ Se även kommentarer i filen.
 ## Begränsningar
 - Koden filtrerar flygplan med SE-registrering, andra objekt visas inte i listan.
 - Vid skolning med elev visas den som har gjort bokningen, inte elevens namn.
-- Bokningar hämtas 3 dagar bakåt i tiden (och 3 dagar framåt) men detta ska verifieras, behövs eventuellt inte längre än innevarande dag.
 - Lite osäkert hur visningen blir om man har en bredare skärm men bara vill visa bokningar/väder och väljer format 4:3. Sidan ska nu vara responsiv men detta har inte testats.
 
 Boka & flyg! :-)
