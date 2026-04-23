@@ -20,7 +20,7 @@ Detta är en enkel informationspanel för en flygklubb som hämtar bokningar fr�
 - Lägg till API-nycklar för checkwx och myweblog (api v4) i config.php
 - Ange ICAO för närmaste flygplats samt koordinater (ex. 55.92) i config.php
 - Konfigurera övriga parametrar enligt önskemål i config.php
-- Ladda upp i ditt webbhotells public_html-mapp. Filerna måste ligga i roten.
+- Ladda upp i ditt webbhotells public_html-mapp. Filerna måste ligga i roten (.../public_html/index.html respektive /api /assets).
 
 ### Parametrar i config.php
 Se även kommentarer i filen.
