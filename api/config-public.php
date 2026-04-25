@@ -44,4 +44,7 @@ echo json_encode([
             ? array_map('trim', explode(',', CAROUSEL_PAGES))
             : [],
     ],
+    'notam' => [
+        'enabled' => defined('NOTAM_ENABLED') ? (bool) NOTAM_ENABLED : true,
+    ],
 ]);
