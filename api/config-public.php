@@ -45,6 +45,6 @@ echo json_encode([
             : [],
     ],
     'notam' => [
-        'enabled' => defined('NOTAM_ENABLED') ? (bool) NOTAM_ENABLED : true,
+        'enabled' => defined('NOTAM_ENABLED') ? (bool) NOTAM_ENABLED : false,
     ],
 ]);
