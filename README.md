@@ -11,7 +11,7 @@ Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 - Banriktning konfigurerbar visas i vindcirkeln
 - Diverse förbättringar i avkodning av METAR, från CheckWX API v2
 
-![flightinformation_v2](https://github.com/user-attachments/assets/39f4e75e-ce40-46c8-88b5-f66841c406fe)
+<img width="1530" height="846" alt="infodisplay_med_notam" src="https://github.com/user-attachments/assets/ffde1912-272b-44ca-b45f-2eb068a1cfe3" />
 
 ## Beskrivning
 Detta är en enkel informationspanel för en flygklubb som hämtar bokningar från <a href="https://myweblog.se">klubbens myWebLog</a> och METAR/TAF för närmaste flygplats från <a href="https://checkwxapi.com">checkwx.com</a>. Båda kräver att man har API-tillgång. **Det måste vara myweblog api 4**! Lämpligt att sätta upp i kiosk-läge i klubbstugan. Data hämtas regelbundet från båda källor, METAR avkodas och visas grafiskt. Baserat på positionsangivelse visas soltider nederst på skärmen.
