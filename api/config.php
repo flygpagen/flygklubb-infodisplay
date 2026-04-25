@@ -33,17 +33,17 @@ define('DISPLAY_FORMAT', '16:9');                  // '4:3' (1440x1080), '16:9' 
 define('THEME_MODE', 'auto');                     // 'day', 'night', or 'auto' (switches at sunrise/sunset)
 define('RADAR_URL', 'https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=kt&zoom=8&overlay=radar&product=radar&level=surface&lat=55.936&lon=14.182&message=true');      // Add url or IP to local ta1090 or other web service
 
+// Display title
+define('DISPLAY_TITLE', 'Flight information');     // Header title text
+
+// NOTAM panel (under bookings)
+define('NOTAM_ENABLED', false);                     // true/false – show NOTAM panel for ICAO_CODE
+
 // Panel carousel – rotate content in the radar panel area
 define('PANEL_CAROUSEL_URLS', '');                  // Comma-separated URLs (if empty, only RADAR_URL is shown)
 define('PANEL_CAROUSEL_INTERVAL', 30);              // Seconds per page in the panel
-
-// Display title
-define('DISPLAY_TITLE', 'Flight information');     // Header title text
 
 // Carousel settings – rotate between kiosk and external pages
 define('CAROUSEL_ENABLED', false);                 // true/false
 define('CAROUSEL_INTERVAL', 30);                   // Seconds per page
 define('CAROUSEL_PAGES', '');                      // Comma-separated URLs (kiosk is always page 1)
-
-// NOTAM panel (under bookings)
-define('NOTAM_ENABLED', true);                     // true/false – show NOTAM panel for ICAO_CODE
