@@ -14,6 +14,11 @@ define('CHECKWX_API_KEY', 'din-apinyckel-här');
 // MyWebLog API v4 credentials (get Bearer token from ADMIN > Integration/API)
 define('MYWEBLOG_BEARER_TOKEN', 'din-apinyckel-här');
 
+// Autorouter API credentials for NOTAM data
+// Register at https://www.autorouter.aero and create an API client to get these
+define('AUTOROUTER_CLIENT_ID', 'your-autorouter-client-id-here');
+define('AUTOROUTER_CLIENT_SECRET', 'your-autorouter-client-secret-here');
+
 // Airport/Location settings
 define('ICAO_CODE', 'ESMK');                      // ICAO code for weather data f.ex. ESMK
 define('LOCATION_LAT', 55.92);                    // Latitude for sun calculations
@@ -39,3 +44,6 @@ define('DISPLAY_TITLE', 'Flight information');     // Header title text
 define('CAROUSEL_ENABLED', false);                 // true/false
 define('CAROUSEL_INTERVAL', 30);                   // Seconds per page
 define('CAROUSEL_PAGES', '');                      // Comma-separated URLs (kiosk is always page 1)
+
+// NOTAM panel (under bookings)
+define('NOTAM_ENABLED', true);                     // true/false – show NOTAM panel for ICAO_CODE
