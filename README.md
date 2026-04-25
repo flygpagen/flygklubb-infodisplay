@@ -10,6 +10,7 @@ Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 - Möjlighet att växla radarvy på huvudsidan (panelkarusell)
 - Banriktning konfigurerbar visas i vindcirkeln
 - Diverse förbättringar i avkodning av METAR, från CheckWX API v2
+- NOTAM från AutoRouter, experimentell funktion
 
 <img width="1530" height="846" alt="infodisplay_med_notam" src="https://github.com/user-attachments/assets/ffde1912-272b-44ca-b45f-2eb068a1cfe3" />
 
