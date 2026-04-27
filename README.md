@@ -15,7 +15,9 @@ Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 <img width="1530" height="846" alt="infodisplay_med_notam" src="https://github.com/user-attachments/assets/ffde1912-272b-44ca-b45f-2eb068a1cfe3" />
 
 ## Beskrivning
-Detta är en enkel informationspanel för en flygklubb som hämtar bokningar från <a href="https://myweblog.se">klubbens myWebLog</a> och METAR/TAF för närmaste flygplats från <a href="https://checkwxapi.com">checkwx.com</a>. Båda kräver att man har API-tillgång. **Det måste vara myweblog api 4**! Lämpligt att sätta upp i kiosk-läge i klubbstugan. Data hämtas regelbundet från båda källor, METAR avkodas och visas grafiskt. Baserat på positionsangivelse visas soltider nederst på skärmen.
+Detta är en webbaserad informationspanel för en flygklubb som hämtar bokningar från <a href="https://myweblog.se">klubbens myWebLog</a> och METAR/TAF för närmaste flygplats från <a href="https://checkwxapi.com">checkwx.com</a>. Båda kräver att man har API-tillgång. **Det måste vara myweblog api 4**! 
+
+Informationspanelen är en webbsida med möjlighet till konfiguration. Den går att sätta upp på ett webhotell (testat) och säkert direkt på en lokal server såsom en Rbpi (ej testat). Lämpligt att sätta upp i kiosk-läge i klubbstugan. Data hämtas regelbundet från båda källor, METAR avkodas och visas grafiskt. Baserat på positionsangivelse visas soltider nederst på skärmen.
 
 ## Installation
 - Lägg till API-nycklar för checkwx och myweblog (api v4) i config.php
