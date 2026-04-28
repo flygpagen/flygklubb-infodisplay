@@ -24,7 +24,6 @@ Informationspanelen är en webbsida med möjlighet till konfiguration. Den går 
 - Lägg till API-nycklar för myweblog (api v4), checkwx och autorouter (valbart) i config.php
 - Ange ICAO för närmaste flygplats samt koordinater (ex. 55.92) i config.php
 - Konfigurera övriga parametrar enligt önskemål i config.php
-- Vid felsökning kan det vara bra att ta bort htaccess-filerna i /api och roten om det är problem att ladda sidan.
 
 ### Parametrar i config.php
 Se även kommentarer i filen.
