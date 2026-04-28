@@ -1,0 +1,76 @@
+# Webroot security and SPA routing
+
+# Disable directory listings
+Options -Indexes
+
+# Default character set
+AddDefaultCharset UTF-8
+
+# ----------------------------------------------------------------------
+# Security headers
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Block sensitive files (backups, dotfiles, configs, logs, etc.)
+# ----------------------------------------------------------------------
+<FilesMatch "(^\.|\.(bak|save|swp|swo|log|env|sql|ini|example|old|orig|dist|inc|conf|cfg|json5)$|~$)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Explicitly block common config/backup names
+<FilesMatch "^(\.htaccess|\.htpasswd|\.git.*|composer\.(json|lock)|package(-lock)?\.json|tsconfig.*\.json|vite\.config\..*|\.DS_Store)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ----------------------------------------------------------------------
+# SPA fallback for React Router
+# All non-file, non-directory requests are rewritten to /index.html
+# EXCEPT requests under /api/ which must reach PHP directly.
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Do not rewrite anything under /api/
+    RewriteRule ^api/ - [L]
+
+    # If the request maps to an existing file or directory, serve it
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Otherwise, hand off to the SPA
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Caching for static assets (build output is content-hashed by Vite)
+# ----------------------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
