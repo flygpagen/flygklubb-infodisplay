@@ -12,7 +12,7 @@ Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 - Diverse förbättringar i avkodning av METAR, från CheckWX API v2
 - NOTAM från AutoRouter, experimentell funktion
 
-<img width="1530" height="846" alt="infodisplay_med_notam" src="https://github.com/user-attachments/assets/ffde1912-272b-44ca-b45f-2eb068a1cfe3" />
+<img width="1507" height="849" alt="infodisplay_m_notam" src="https://github.com/user-attachments/assets/65960a91-5b25-4389-b9fa-163ddaa04133" />
 
 ## Beskrivning
 Detta är en webbaserad informationspanel för en flygklubb som hämtar bokningar från <a href="https://myweblog.se">klubbens myWebLog</a>, METAR/TAF för närmaste flygplats från <a href="https://checkwxapi.com">checkwx.com</a> och NOTAM från [Autorouter](https://www.autorouter.aero/). Alla tjänster kräver att man har API-tillgång. **Nycklar från myWebLog måste vara myweblog api v4**. 
