@@ -20,7 +20,7 @@ Detta är en webbaserad informationspanel för en flygklubb som hämtar bokninga
 Informationspanelen är en webbsida med möjlighet till konfiguration. Den går att sätta upp på ett webhotell (testat) och säkert direkt på en lokal server såsom en Rbpi (ej testat). Lämpligt att sätta upp i kiosk-läge i klubbstugan. Data hämtas regelbundet från båda källor, METAR avkodas och visas grafiskt. Baserat på positionsangivelse visas soltider nederst på skärmen.
 
 ## Installation
-- Ladda upp i ditt webbhotells public_html-mapp. Filerna måste ligga i roten (.../public_html/index.html respektive /api /assets).
+- Ladda upp i ditt webbhotells public_html-mapp. Filerna måste ligga i roten (.../public_html/index.html respektive /api /assets). De flesta webhotell gör det enkelt att skapa en underdomän där man kan lägga filerna (exempelvis *infodisplay.flygklubb.nu*)
 - Lägg till API-nycklar för myweblog (api v4), checkwx och autorouter (valbart) i config.php
 - Ange ICAO för närmaste flygplats samt koordinater (ex. 55.92) i config.php
 - Konfigurera övriga parametrar enligt önskemål i config.php
