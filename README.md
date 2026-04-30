@@ -32,6 +32,7 @@ Se även kommentarer i filen.
 - **Display settings**: Ange om skärmen är 4:3 ("tjocktv"), 16:9 ("widescreen") eller stående 9:16. Vid formaten 16:9 och 9:16 läggs en tredje del av skärmen till som kan konfigureras att visa väderradar eller flygradar eller något annat. Ange i parametern RADAR_URL vad som ska visas här. Hemma kör vi den lokala FR24-mottagarens radarbild eller snarare tar1090.
 - **Panel carousel**: Vill du visa växelvis flera tjänster på informationssidan lägger du till ytterligare URL:er här. [Windy har en embed-funktion](https://embed.windy.com/config/map) där du kan ta fram en lokal väderradar att lägga in. Flera adresser separeras med kommatecken. Det är bara tjänster utöver den du angav i RADAR_URL som du lägger till här.
 - **Carousel settings**: Om du vill att det ska visas fler sidor på skärmen än bara flyginformationssidan kan du lägga till dem här. Carousel enabled behöver sättas till *true*. Ställ in intervall mellan byten i sekunder. Lägg till vilka sidor som ska hämtas (url:er kommaseparerade) i den ordning som de ska visas.
+- **NOTAM Panel**: Aktivera (true) eller avaktivera (false) visning av NOTAM. Data hämtas för värdet i ICAO_CODE under Airport/Location settings.
 
 ## Begränsningar
 - Koden filtrerar flygplan med SE-registrering, andra objekt visas inte i listan.
