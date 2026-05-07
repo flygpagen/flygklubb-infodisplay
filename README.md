@@ -1,7 +1,7 @@
 # InfoDisplay flygklubb version 2
 Ett projekt byggt med Lovable. Detta är den kompilerade versionen som inte kräver att man bygger projektet själv.
 
-# Version 2 nyheter
+## Version 2 nyheter ##
 Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 - Valbart tema för dag/natt eller auto (växlar vid solnedgång)
 - Välj mellan format 4:3, 16:9 eller stående 9:16
