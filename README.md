@@ -1,4 +1,4 @@
-# InfoDisplay flygklubb version 2
+# InfoDisplay flygklubb
 Ett projekt byggt med Lovable. Detta är den kompilerade versionen som inte kräver att man bygger projektet själv.
 
 <img width="949" height="542" alt="image" src="https://github.com/user-attachments/assets/cc012b4e-278a-4cef-b325-0e16ef10a698" />
