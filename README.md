@@ -1,6 +1,13 @@
 # InfoDisplay flygklubb version 2
 Ett projekt byggt med Lovable. Detta är den kompilerade versionen som inte kräver att man bygger projektet själv.
 
+<img width="1507" height="849" alt="infodisplay_m_notam" src="https://github.com/user-attachments/assets/65960a91-5b25-4389-b9fa-163ddaa04133" />
+
+## Version 2.1 nyheter ##
+- Möjlighet att ange antal uppdateringar av METAR/TAF. Då CheckWX inför begränsat antal anrop per dygn till max 200 kan man nu ange hur ofta data hämtas. Standardvärdena är TAF var 60 minut och METAR var 15 minut
+- Konfigurerbart att hämta väder från en flygplats och NOTAM från en annan. Lämpligt för mindre flygplatser utan "eget väder"
+- Allmänt småfix
+
 ## Version 2 nyheter ##
 Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 - Valbart tema för dag/natt eller auto (växlar vid solnedgång)
@@ -11,8 +18,6 @@ Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 - Banriktning konfigurerbar visas i vindcirkeln
 - Diverse förbättringar i avkodning av METAR, från CheckWX API v2
 - NOTAM från AutoRouter, experimentell funktion
-
-<img width="1507" height="849" alt="infodisplay_m_notam" src="https://github.com/user-attachments/assets/65960a91-5b25-4389-b9fa-163ddaa04133" />
 
 ## Beskrivning
 Detta är en webbaserad informationspanel för en flygklubb som hämtar bokningar från <a href="https://myweblog.se">klubbens myWebLog</a>, METAR/TAF för närmaste flygplats från <a href="https://checkwxapi.com">checkwx.com</a> och NOTAM från [Autorouter](https://www.autorouter.aero/). Alla tjänster kräver att man har API-tillgång. **Nycklar från myWebLog måste vara myweblog api v4**. 
