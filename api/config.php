@@ -38,7 +38,10 @@ define('RADAR_URL', 'https://embed.windy.com/embed.html?type=map&location=coordi
 define('DISPLAY_TITLE', 'Flight information');     // Header title text
 
 // NOTAM panel (under bookings)
-define('NOTAM_ENABLED', false);                     // true/false – show NOTAM panel for ICAO_CODE
+define('NOTAM_ENABLED', true);                     // true/false – show NOTAM panel for ICAO_CODE
+
+// Weather panel (METAR/TAF via CheckWX)
+define('WEATHER_ENABLED', true);                   // true/false – show weather panel
 
 // CheckWX poll-intervaller per resurs (en instans = ett anrop per intervall)
 // Gratisplanen tillåter 200 anrop/dygn. Räkna: 1440/METAR + 1440/TAF.
