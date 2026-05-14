@@ -21,6 +21,7 @@ define('AUTOROUTER_CLIENT_SECRET', 'your-autorouter-client-secret-here');
 
 // Airport/Location settings
 define('ICAO_CODE', 'ESMK');                      // ICAO code for weather data f.ex. ESMK
+define('NOTAM_ICAO_CODE', 'ESMK');                // ICAO code for NOTAM (kan skilja sig från väder-ICAO)
 define('LOCATION_LAT', 55.92);                    // Latitude for sun calculations
 define('LOCATION_LON', 14.08);                    // Longitude for sun calculations
 define('LOCATION_TIMEZONE', 'Europe/Stockholm');  // Timezone for display
@@ -38,6 +39,12 @@ define('DISPLAY_TITLE', 'Flight information');     // Header title text
 
 // NOTAM panel (under bookings)
 define('NOTAM_ENABLED', false);                     // true/false – show NOTAM panel for ICAO_CODE
+
+// CheckWX poll-intervaller per resurs (en instans = ett anrop per intervall)
+// Gratisplanen tillåter 200 anrop/dygn. Räkna: 1440/METAR + 1440/TAF.
+// Defaults (15 + 60) = 96 + 24 = 120 anrop/dygn.
+define('METAR_REFRESH_MINUTES', 15);               // Hur ofta METAR hämtas (minuter)
+define('TAF_REFRESH_MINUTES', 60);                 // Hur ofta TAF hämtas (minuter)
 
 // Panel carousel – rotate content in the radar panel area
 define('PANEL_CAROUSEL_URLS', '');                  // Comma-separated URLs (if empty, only RADAR_URL is shown)
