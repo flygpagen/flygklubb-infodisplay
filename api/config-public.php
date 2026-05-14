@@ -45,6 +45,13 @@ echo json_encode([
             : [],
     ],
     'notam' => [
-        'enabled' => defined('NOTAM_ENABLED') ? (bool) NOTAM_ENABLED : false,
+        'enabled' => defined('NOTAM_ENABLED') ? (bool) NOTAM_ENABLED : true,
+        'icao' => defined('NOTAM_ICAO_CODE') ? NOTAM_ICAO_CODE
+            : (defined('ICAO_CODE') ? ICAO_CODE : 'ESMK'),
+    ],
+    'weather' => [
+        'enabled' => defined('WEATHER_ENABLED') ? (bool) WEATHER_ENABLED : true,
+        'metarRefreshMinutes' => defined('METAR_REFRESH_MINUTES') ? max(1, (int) METAR_REFRESH_MINUTES) : 15,
+        'tafRefreshMinutes' => defined('TAF_REFRESH_MINUTES') ? max(1, (int) TAF_REFRESH_MINUTES) : 60,
     ],
 ]);

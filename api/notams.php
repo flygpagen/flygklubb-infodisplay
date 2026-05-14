@@ -15,7 +15,8 @@ if (file_exists($configFile)) {
 
 $clientId = defined('AUTOROUTER_CLIENT_ID') ? AUTOROUTER_CLIENT_ID : getenv('AUTOROUTER_CLIENT_ID');
 $clientSecret = defined('AUTOROUTER_CLIENT_SECRET') ? AUTOROUTER_CLIENT_SECRET : getenv('AUTOROUTER_CLIENT_SECRET');
-$icao = defined('ICAO_CODE') ? ICAO_CODE : 'ESMK';
+$icao = defined('NOTAM_ICAO_CODE') ? NOTAM_ICAO_CODE
+    : (defined('ICAO_CODE') ? ICAO_CODE : 'ESMK');
 
 if (empty($clientId) || empty($clientSecret)) {
     http_response_code(500);
