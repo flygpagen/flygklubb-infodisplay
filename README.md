@@ -6,6 +6,7 @@ Ett projekt byggt med Lovable. Detta är den kompilerade versionen som inte krä
 ## Version 2.1 nyheter ##
 - Möjlighet att ange antal uppdateringar av METAR/TAF. Då CheckWX inför begränsat antal anrop per dygn till max 200 kan man nu ange hur ofta data hämtas. Standardvärdena är TAF var 60 minut och METAR var 15 minut
 - Konfigurerbart att hämta väder från en flygplats och NOTAM från en annan. Lämpligt för mindre flygplatser utan "eget väder"
+- Om man enbart vill visa bokningar men inte METAR/TAF kan man inaktivera väderpanelen i config.php
 - Allmänt småfix
 
 ## Version 2 nyheter ##
