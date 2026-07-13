@@ -6,7 +6,7 @@
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
-header('Cache-Control: max-age=600'); // 10 minutes browser cache
+header('Cache-Control: max-age=3600'); // 60 minutes browser cache
 
 $configFile = __DIR__ . '/config.php';
 if (file_exists($configFile)) {
@@ -26,7 +26,7 @@ if (empty($clientId) || empty($clientSecret)) {
 
 // Server-side NOTAM cache (10 min)
 $cacheFile = sys_get_temp_dir() . "/notams_{$icao}.json";
-$cacheTtl = 600;
+$cacheTtl = 3600;
 
 if (file_exists($cacheFile) && (time() - filemtime($cacheFile)) < $cacheTtl) {
     readfile($cacheFile);
@@ -81,7 +81,12 @@ function autorouter_get_token($clientId, $clientSecret) {
 $token = autorouter_get_token($clientId, $clientSecret);
 
 if (!$token) {
-    $fallback = json_encode(['notams' => [], 'icao' => $icao, 'fetchedAt' => date('c'), 'error' => 'Auth failed']);
+    $fallback = json_encode([
+        'notams' => [],
+        'icao' => $icao,
+        'fetchedAt' => date('c'),
+        'error' => 'Auth failed',
+    ]);
     echo $fallback;
     exit;
 }
@@ -105,7 +110,6 @@ if ($response === false) {
     echo $fallback;
     exit;
 }
-
 
 $data = json_decode($response, true);
 $notams = [];
