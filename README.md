@@ -28,7 +28,7 @@ Denna version är ordentligt uppdaterad med flera efterfrågade funktioner:
 - NOTAM från AutoRouter, experimentell funktion
 
 ## Beskrivning
-Detta är en webbaserad informationspanel för en flygklubb som hämtar bokningar från <a href="https://myweblog.se">klubbens myWebLog</a>, METAR/TAF för närmaste flygplats från <a href="https://checkwxapi.com">checkwx.com</a> och NOTAM från [Autorouter](https://www.autorouter.aero/). Alla tjänster kräver att man har API-tillgång. **Nycklar från myWebLog måste vara myweblog api v4**. 
+Detta är en webbaserad informationspanel för en flygklubb som hämtar bokningar från <a href="https://myweblog.se">klubbens myWebLog</a>, METAR/TAF för närmaste flygplats från <a href="https://checkwxapi.com">checkwx.com</a> och NOTAM från [Autorouter](https://www.autorouter.aero/). Alla tjänster kräver att man har API-tillgång. **Nycklar från myWebLog måste vara myweblog api v4 eller V5**. 
 
 Informationspanelen är en webbsida med möjlighet till konfiguration. Den går att sätta upp på ett webhotell (testat) och säkert direkt på en lokal server såsom en Rbpi (ej testat). Lämpligt att sätta upp i kiosk-läge i klubbstugan. Data hämtas regelbundet från båda källor, METAR avkodas och visas grafiskt. Baserat på positionsangivelse visas soltider nederst på skärmen.
 
@@ -46,10 +46,10 @@ Se även kommentarer i filen.
 - **Panel carousel**: Vill du visa växelvis flera tjänster på informationssidan lägger du till ytterligare URL:er här. [Windy har en embed-funktion](https://embed.windy.com/config/map) där du kan ta fram en lokal väderradar att lägga in. Flera adresser separeras med kommatecken. Det är bara tjänster utöver den du angav i RADAR_URL som du lägger till här.
 - **Carousel settings**: Om du vill att det ska visas fler sidor på skärmen än bara flyginformationssidan kan du lägga till dem här. Carousel enabled behöver sättas till *true*. Ställ in intervall mellan byten i sekunder. Lägg till vilka sidor som ska hämtas (url:er kommaseparerade) i den ordning som de ska visas.
 - **NOTAM Panel**: Aktivera (true) eller avaktivera (false) visning av NOTAM. Data hämtas för värdet i ICAO_CODE under Airport/Location settings.
+- **WIND_VARIATION_ENABLED**: Utöver pilen som visar vindriktning visas även infallsvinkel för variabel vind, om detta värde finns med i METAR.
 
 ## Begränsningar
 - Koden filtrerar flygplan med SE-registrering, andra objekt visas inte i listan.
 - Vid skolning med elev visas den som har gjort bokningen, inte elevens namn.
-- Lite osäkert hur visningen blir om man har en bredare skärm men bara vill visa bokningar/väder och väljer format 4:3. Sidan ska nu vara responsiv men detta har inte testats.
 
 Boka & flyg! :-)
