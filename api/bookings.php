@@ -157,7 +157,8 @@ foreach ($allBookings as $booking) {
         $aircraft = $booking['object']['registration'] ?? '';
     
     // Filter: Only include aircraft (Swedish registration format SE-XXX)
-    if (!preg_match('/^SE-[A-Z]{3}$/', $aircraft)) {
+    $aircraftFilter = defined('MYWEBLOG_OBJECT_FILTER') ? MYWEBLOG_OBJECT_FILTER : getenv('MYWEBLOG_OBJECT_FILTER');
+    if (!preg_match($aircraftFilter, $aircraft)) {
         continue;
     }
     
