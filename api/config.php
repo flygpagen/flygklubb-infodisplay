@@ -20,6 +20,10 @@ define('MYWEBLOG_BEARER_TOKEN', 'din-apinyckelV5-här');
 // Lämna tom för att skicka token direkt (fungerar t.o.m. 2027-12-31).
 define('MYWEBLOG_CLIENT_ID', 'ditt-client-idV5-här');
 
+// Regexp filter for which objects to show from MyWebLog
+// default is Swedish registration format SE-***
+define('MYWEBLOG_OBJECT_FILTER', '/^SE-[A-Z]{3}$/');
+
 // Autorouter API credentials for NOTAM data
 // Register at https://www.autorouter.aero and create an API client to get these
 define('AUTOROUTER_CLIENT_ID', 'your-autorouter-client-id-here');
